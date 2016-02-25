@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 	<Metadata>
-		<Identity Id="StringToStringAnalyzer.Tim Johnson.391e71b4-2eca-41ec-b163-701072dad428" Version="1.0" Language="en-US" Publisher="timjohnson"/>
+		<Identity Id="StringToStringAnalyzer.TimJohnson.391e71b4-2eca-41ec-b163-701072dad428" Version="1.0" Language="en-US" Publisher="timjohnson"/>
 		<DisplayName>StringToStringAnalyzer</DisplayName>
 		<Description xml:space="preserve">This is a sample diagnostic extension for the .NET Compiler Platform ("Roslyn").</Description>
 	</Metadata>

@@ -126,7 +126,7 @@
     <comment>The format-able message the diagnostic displays.</comment>
   </data>
   <data name="AnalyzerTitle" xml:space="preserve">
-    <value>ToString() called on String variables.</value>
+    <value>ToString method called on String variables.</value>
     <comment>The title of the diagnostic.</comment>
   </data>
 </root>

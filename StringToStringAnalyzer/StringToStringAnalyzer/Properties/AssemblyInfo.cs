@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("StringToStringAnalyzer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Epicor Software Corporation")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("StringToStringAnalyzer")]
-[assembly: AssemblyCopyright("Copyright © Epicor Software Corporation 2016")]
+[assembly: AssemblyCopyright("Copyright © Tim Johnson 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

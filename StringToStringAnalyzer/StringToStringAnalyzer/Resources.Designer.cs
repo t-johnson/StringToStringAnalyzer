@@ -80,7 +80,7 @@ namespace StringToStringAnalyzer {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ToString() called on String variables..
+        ///   Looks up a localized string similar to ToString method called on String variables..
         /// </summary>
         internal static string AnalyzerTitle {
             get {
