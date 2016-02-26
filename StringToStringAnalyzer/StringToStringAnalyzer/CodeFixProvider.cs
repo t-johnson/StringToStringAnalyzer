@@ -40,7 +40,9 @@ namespace StringToStringAnalyzer
          var diagnosticSpan = diagnostic.Location.SourceSpan;
 
          // Find the InvocationExpressionSyntax identified by the diagnostic.
-         var invocation = root.FindToken(diagnosticSpan.Start).Parent.Ancestors().OfType<InvocationExpressionSyntax>().First(t => t.ArgumentList.ChildNodes().Count() == 0 && ((MemberAccessExpressionSyntax)t.Expression).Name.Identifier.ValueText == "ToString");
+         var invocation = root.FindToken(diagnosticSpan.Start).Parent.Ancestors().OfType<InvocationExpressionSyntax>().First(t => 
+            t.IsKind(SyntaxKind.InvocationExpression) &&
+            ((MemberAccessExpressionSyntax)t.Expression).Name.Identifier.ValueText == "ToString");
 
          // Register a code action that will invoke the fix.
          context.RegisterCodeFix(
@@ -54,9 +56,11 @@ namespace StringToStringAnalyzer
       private async Task<Document> RemoveMethodCallAsnyc(Document document, InvocationExpressionSyntax invocationExpr, CancellationToken cancellationToken)
       {
          var semanticModel = await document.GetSemanticModelAsync(cancellationToken);
-
          var memberAccessExpr = invocationExpr.Expression as MemberAccessExpressionSyntax;
          var memberSymbol = memberAccessExpr.Expression;
+
+         //clone its trivia
+         memberSymbol = memberSymbol.WithTriviaFrom(invocationExpr);
          var root = await document.GetSyntaxRootAsync();
          var newRoot = root.ReplaceNode(invocationExpr, memberSymbol);
 
