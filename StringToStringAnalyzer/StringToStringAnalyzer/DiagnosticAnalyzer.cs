@@ -52,12 +52,6 @@ namespace StringToStringAnalyzer
                return;
             }
 
-            //only the ToString with no args
-            if (invocation.ArgumentList.ChildNodes().Count() > 0)
-            {
-               return;
-            }
-
             var type = context.SemanticModel.GetTypeInfo(parent);
             if (type.Type.SpecialType != SpecialType.System_String)
             {
